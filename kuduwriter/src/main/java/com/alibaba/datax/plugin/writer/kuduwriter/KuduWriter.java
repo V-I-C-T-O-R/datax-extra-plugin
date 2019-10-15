@@ -1,6 +1,5 @@
 package com.alibaba.datax.plugin.writer.kuduwriter;
 
-import com.alibaba.datax.common.element.Column;
 import com.alibaba.datax.common.element.Record;
 import com.alibaba.datax.common.exception.DataXException;
 import com.alibaba.datax.common.plugin.RecordReceiver;

@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * Interface for an operations producer that produces Kudu Operations from
- * Flume events.
+ * Datax events.
  */
 
 public interface KuduOperationsProducer {
