@@ -1,0 +1,6 @@
+{
+    "name": "kuduwriter",
+    "class": "com.alibaba.datax.plugin.writer.kuduwriter.KuduWriter",
+    "description": "writer data to kudu.",
+    "developer": "victor"
+}

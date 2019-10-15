@@ -1,0 +1,19 @@
+{
+    "name": "kuduwriter",
+    "parameter": {
+        "username": "",
+        "password": "",
+        "writeMode": "",
+        "primaryKey":"",
+        "namespace":"",
+        "flushBufferSize":"",
+        "column": [],
+        "preSql": [],
+        "connection": [
+            {
+                "jdbcUrl": "",
+                "table": []
+            }
+        ]
+    }
+}
