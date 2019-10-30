@@ -90,7 +90,7 @@ KuduWriter 通过 DataX 框架获取 Reader 生成的协议数据，根据你配
 
 	* 描述：暂未用到 <br />
 
-	* 必选：是 <br />
+	* 必选：否 <br />
 
 	* 默认值：无 <br />
 
@@ -98,7 +98,7 @@ KuduWriter 通过 DataX 框架获取 Reader 生成的协议数据，根据你配
 
 	* 描述：暂未用到 <br />
 
-	* 必选：是 <br />
+	* 必选：否 <br />
 
 	* 默认值：无 <br />
 
@@ -124,9 +124,9 @@ KuduWriter 通过 DataX 框架获取 Reader 生成的协议数据，根据你配
 
 	* 必选：是 <br />
 	
-	* 所有选项：insert/replace/update <br />
+	* 所有选项：insert/upsert <br />
 
-	* 默认值：insert <br />
+	* 默认值：upsert <br />
 
 * **batchSize**
 
