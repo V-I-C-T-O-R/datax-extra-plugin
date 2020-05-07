@@ -11,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.nio.charset.Charset;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -93,7 +94,13 @@ public class JsonKuduOperationProducer implements KuduOperationsProducer {
                             }else{
                                 colValue = String.valueOf(tmpDate.getTime());
                             }
-                        }else{
+                        } else if(columnObj.getType()== Column.Type.DOUBLE){
+                            NumberFormat nf = NumberFormat.getInstance();
+                            // 是否以逗号隔开, 默认true以逗号隔开,如[123,456,789.128]
+                            nf.setGroupingUsed(false);
+                            // 结果未做任何处理
+                            colValue = nf.format(columnObj.asDouble());
+                        } else{
                             colValue = String.valueOf(columnObj.asString());
                         }
                         coerceAndSet(colValue, colName, Type.STRING, row);
