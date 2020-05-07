@@ -98,6 +98,7 @@ public class JsonKuduOperationProducer implements KuduOperationsProducer {
                             NumberFormat nf = NumberFormat.getInstance();
                             // 是否以逗号隔开, 默认true以逗号隔开,如[123,456,789.128]
                             nf.setGroupingUsed(false);
+                            nf.setMaximumFractionDigits(20);
                             // 结果未做任何处理
                             colValue = nf.format(columnObj.asDouble());
                         } else{
