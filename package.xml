@@ -183,6 +183,13 @@
             <outputDirectory>datax</outputDirectory>
         </fileSet>
         <fileSet>
+            <directory>hanawriter/target/datax/</directory>
+            <includes>
+                <include>**/*.*</include>
+            </includes>
+            <outputDirectory>datax</outputDirectory>
+        </fileSet>
+        <fileSet>
             <directory>kuduwriter/target/datax/</directory>
             <includes>
                 <include>**/*.*</include>
