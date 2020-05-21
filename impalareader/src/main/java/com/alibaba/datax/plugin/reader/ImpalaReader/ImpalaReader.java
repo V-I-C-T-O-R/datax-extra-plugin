@@ -140,8 +140,8 @@ public class ImpalaReader extends Reader {
                 connConf.getNecessaryValue(com.alibaba.datax.plugin.rdbms.reader.Key.QUERY_SQL, DBUtilErrorCode.TABLE_QUERYSQL_MISSING);
             String where = originalConfig.getString(com.alibaba.datax.plugin.rdbms.reader.Key.WHERE, null);
             String column = StringUtils.join(columns, ",");
+            logger.info(String.format("jdbcUrl:[%s]", connConf.getString(Key.JDBC_URL)));
 
-            String.format("jdbcUrl:[%s]", connConf.getString(Key.JDBC_URL));
             datasource = new DruidDataSource();
             datasource.setUrl(connConf.getString(Key.JDBC_URL));
             datasource.setUsername(dataSourceConf.getString(this.username));
