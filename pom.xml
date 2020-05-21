@@ -63,6 +63,7 @@
         <module>hbase094xreader</module>
         <module>opentsdbreader</module>
         <module>hanareader</module>
+        <module>impalareader</module>
 
         <!-- writer -->
         <module>mysqlwriter</module>

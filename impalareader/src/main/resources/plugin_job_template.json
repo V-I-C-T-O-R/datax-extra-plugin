@@ -1,0 +1,30 @@
+{
+    "name": "impalareader",
+    "parameter": {
+        "datasource": {
+            "initialSize": 1,
+            "minIdle": 1,
+            "maxActive": 3,
+            "maxWait": 60000,
+            "timeBetweenEvictionRunsMillis": 3000,
+            "minEvictableIdleTimeMillis": 360000,
+            "validationQuery": "SELECT 1",
+            "testWhileIdle": true,
+            "testOnBorrow": true,
+            "testOnReturn": true,
+            "poolPreparedStatements": false,
+            "maxPoolPreparedStatementPerConnectionSize": 0,
+            "useGlobalDataSourceStat": true,
+            "removeAbandoned": true,
+            "removeAbandonedTimeout": 600,
+            "logAbandoned": false
+        },
+        "column": [],
+        "connection": [
+            {
+                "table": [],
+                "jdbcUrl": ""
+            }
+        ]
+    }
+}

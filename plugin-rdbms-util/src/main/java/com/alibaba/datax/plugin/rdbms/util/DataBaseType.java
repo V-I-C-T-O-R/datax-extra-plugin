@@ -20,7 +20,8 @@ public enum DataBaseType {
     DB2("db2", "com.ibm.db2.jcc.DB2Driver"),
     ADS("ads","com.mysql.jdbc.Driver"),
     KUDU("kudu",""),
-    HaNa("hana","com.sap.db.jdbc.Driver");
+    HaNa("hana","com.sap.db.jdbc.Driver"),
+    Impala("impala","com.cloudera.impala.jdbc41.Driver");
 
     private String typeName;
     private String driverClassName;
