@@ -133,6 +133,12 @@ ImpalaReader插件实现了从Impala读取数据。在底层实现上，ImpalaRe
 
 
 ### 3.2 参数说明
+* **datasource**
+	* 描述：描述的是druid连接池连接impala的配置信息，使用JSON的字符串描述。	
+
+	* 必选：是 <br />
+
+	* 默认值：无 <br />
 
 * **jdbcUrl**
 
