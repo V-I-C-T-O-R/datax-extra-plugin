@@ -32,7 +32,7 @@ ImpalaReader插件实现了从Impala读取数据。在底层实现上，ImpalaRe
         "content": [
             {
                 "reader": {
-                    "name": "Impalareader",
+                    "name": "impalareader",
                     "parameter": { 
                         "datasource": {
                             "initialSize": 1,
@@ -219,3 +219,4 @@ ImpalaReader插件实现了从Impala读取数据。在底层实现上，ImpalaRe
 
 	* 默认值：5000 <br />
 
+##### 注意，setting配置中的channel配置数一旦配置，当前值只能为1。否则，数据会重复导出。
