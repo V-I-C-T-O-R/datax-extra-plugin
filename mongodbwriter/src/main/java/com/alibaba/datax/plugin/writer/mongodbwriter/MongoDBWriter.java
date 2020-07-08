@@ -175,9 +175,29 @@ public class MongoDBWriter extends Writer{
                             super.getTaskPluginCollector().collectDirtyRecord(record, e);
                         }
                     } else if(record.getColumn(i) instanceof StringColumn){
-                        //处理ObjectId和数组类型
+                        //处理ObjectId和数组类型,字符串值转为指定类型
                         try {
-                            if (KeyConstant.isObjectIdType(type.toLowerCase())) {
+                            //自定义开始
+                            if(Column.Type.LONG.name().equalsIgnoreCase(type)) {
+                                data.put(columnMeta.getJSONObject(i).getString(KeyConstant.COLUMN_NAME),record.getColumn(i).asLong());
+                            } else if(Column.Type.DATE.name().equalsIgnoreCase(type)) {
+                                    data.put(columnMeta.getJSONObject(i).getString(KeyConstant.COLUMN_NAME),
+                                            record.getColumn(i).asDate());
+
+                            } else if(Column.Type.DOUBLE.name().equalsIgnoreCase(type)) {
+                                    data.put(columnMeta.getJSONObject(i).getString(KeyConstant.COLUMN_NAME),
+                                            record.getColumn(i).asDouble());
+
+                            } else if(Column.Type.BOOL.name().equalsIgnoreCase(type)) {
+                                    data.put(columnMeta.getJSONObject(i).getString(KeyConstant.COLUMN_NAME),
+                                            record.getColumn(i).asBoolean());
+
+                            } else if(Column.Type.BYTES.name().equalsIgnoreCase(type)) {
+                                    data.put(columnMeta.getJSONObject(i).getString(KeyConstant.COLUMN_NAME),
+                                            record.getColumn(i).asBytes());
+                            }
+                            //自定义截止
+                            else if (KeyConstant.isObjectIdType(type.toLowerCase())) {
                                 data.put(columnMeta.getJSONObject(i).getString(KeyConstant.COLUMN_NAME),
                                     new ObjectId(record.getColumn(i).asString()));
                             } else if (KeyConstant.isArrayType(type.toLowerCase())) {
