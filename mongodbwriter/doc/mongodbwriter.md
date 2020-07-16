@@ -133,6 +133,7 @@ MongoDBWriter通过Datax框架获取Reader生成的数据，然后将Datax支持
 * userName：MongoDB的用户名。【选填】
 * userPassword： MongoDB的密码。【选填】
 * collectionName： MonogoDB的集合名。【必填】
+* preSql：有drop和remove两种，具体可以看源代码。示例："preSql":{"type":"remove","json":"","item":[]}或者"preSql":{"type":"drop"}
 * column：MongoDB的文档列名。【必填】
 * name：Column的名字。【必填】
 * type：Column的类型。【选填】
